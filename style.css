@@ -1,0 +1,200 @@
+/* ═══ DESIGN TOKENS & VARIABLES ═══ */
+:root {
+    --bg-primary: #0A0A0F;
+    --bg-secondary: #12121A;
+    --bg-card: rgba(26, 26, 40, 0.45);
+    --bg-input: rgba(18, 18, 26, 0.8);
+    --border: rgba(255, 255, 255, 0.08);
+    --border-focus: #FF007F;
+    --accent: #FF007F;
+    --accent-rgb: 255, 0, 127;
+    --accent-light: rgba(255, 0, 127, 0.12);
+    
+    --text-primary: #FFFFFF;
+    --text-secondary: #A0A0B0;
+    --text-muted: #606070;
+}
+
+/* ═══ GLOBAL SYSTEM RESET ═══ */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    position: relative;
+    padding: 24px;
+}
+
+/* ═══ DYNAMIC GRADIENT BACKDROP ═══ */
+.glass-bg {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at 75% 75%, rgba(255, 0, 127, 0.08) 0%, transparent 40%),
+                radial-gradient(circle at 25% 25%, rgba(138, 43, 226, 0.06) 0%, transparent 40%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* ═══ CONTAINER LAYOUT ═══ */
+.app-container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* ═══ PREMIUM GLASS HEADER ═══ */
+.app-header {
+    background: var(--bg-card);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.logo-emoji {
+    font-size: 32px;
+    background: var(--accent-light);
+    border: 1px solid rgba(255, 0, 127, 0.2);
+    border-radius: 12px;
+    width: 54px;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title-col h1 {
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.tagline {
+    font-size: 13px;
+    color: var(--text-secondary);
+    margin-top: 2px;
+}
+
+.badge {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--accent);
+    background: var(--accent-light);
+    border: 1px solid rgba(255, 0, 127, 0.25);
+    padding: 6px 12px;
+    border-radius: 20px;
+}
+
+/* ═══ WORKSPACE CONTENT CARD ═══ */
+.workspace-card {
+    background: var(--bg-card);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    padding: 32px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    min-height: 300px;
+}
+
+/* ═══ FORM CONTROLS & INTERACTIVE UI ═══ */
+input[type="text"], input[type="number"], select {
+    background: var(--bg-input);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    color: var(--text-primary);
+    padding: 12px 16px;
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+    transition: all 0.25s ease;
+}
+
+input:focus, select:focus {
+    border-color: var(--border-focus);
+    box-shadow: 0 0 10px rgba(255, 0, 127, 0.15);
+}
+
+.btn {
+    background: var(--accent);
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 24px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.btn:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 15px rgba(255, 0, 127, 0.3);
+}
+
+.btn-secondary {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid var(--border);
+    color: var(--text-primary);
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.12);
+    box-shadow: none;
+}
+
+/* ═══ FOOTER BRANDING ═══ */
+.app-footer {
+    text-align: center;
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-top: 10px;
+}
+
+.app-footer a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.app-footer a:hover {
+    color: var(--accent);
+}
+
+/* App Custom Styles */
+

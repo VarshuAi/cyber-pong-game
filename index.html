@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Pong — Glassmorphism Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="glass-bg"></div>
+    <div class="app-container">
+        <header class="app-header">
+            <div class="logo-row">
+                <span class="logo-emoji">🏓</span>
+                <div class="title-col">
+                    <h1>Cyber Pong</h1>
+                    <p class="tagline">Responsive neon paddle-ball simulator with built-in progressive AI score targets.</p>
+                </div>
+            </div>
+            <div class="badge">games</div>
+        </header>
+
+        <main class="workspace-card">
+            
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <canvas id="pong-canvas" width="400" height="300" style="border: 1px solid var(--border); border-radius: 12px; background: #000;"></canvas>
+            </div>
+        
+        </main>
+        
+        <footer class="app-footer">
+            <p>Created as a premium portfolio piece by <a href="https://github.com/VARSHAN69" target="_blank">@VARSHAN69</a></p>
+        </footer>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
