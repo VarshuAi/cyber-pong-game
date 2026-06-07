@@ -38,7 +38,7 @@ version: 1.0
 type: Repository
 author: VarshuAi
 description: >
-  Responsive neon paddle-ball simulator with built-in progressive AI score targets.
+  name: cyber-pong-game version: 1.0 type: Repository author: VarshuAi description: >   Responsive neon paddle-ball simulator with built-in progressive AI score targets. primary_tech: CSS
 primary_tech: CSS
 ```
 
